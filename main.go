@@ -91,8 +91,7 @@ func TcpClient(mysqlManager *mySqlManager) {
 				log.Println("Failed to insert statistics:", err)
 			}
 		case "Check":
-			userID := args[0]
-			err := mysqlManager.Check(userID)
+			err := mysqlManager.Check(args[0])
 
 			if err != nil {
 				log.Println("Failed to check statistics:", err)
